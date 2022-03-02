@@ -1,0 +1,12 @@
+export const spliter = '/icons/spliter.png';
+export const search = '/icons/search.png';
+export const searchRed = '/icons/searchRed.png';
+export const home = '/icons/home.png';
+export const homeRed = '/icons/homeRed.png';
+export const like = '/icons/like.png';
+export const likeRed = '/icons/likeRed.png';
+export const ic_basket = '/icons/basket.png';
+export const ic_basketRed = '/icons/basketRed.png';
+export const ic_close = '/icons/close.png';
+export const ic_add = '/icons/ic_add.png';
+export const ic_minus = '/icons/ic_minus.png';
