@@ -17,7 +17,7 @@ function TopProduct(props) {
     const product=props.product;
     return (
         <div  className={styles.card}>
-            <Image src={product.image} width={250} height={150} />
+            <Image src={product.image} width={350} height={200} />
             <h3 style={{fontSize:14}}>{product.title}</h3>
             <strike style={{color:'red'}}><span style={{fontSize:15,color:'red',}}> {priceFormatter(product.price)} تومان</span></strike>
             <span style={{fontSize:15,marginTop:10}}> {priceFormatter(product.price-product.off*product.price)} تومان</span>

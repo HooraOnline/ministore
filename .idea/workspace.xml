@@ -7,9 +7,12 @@
     <list default="true" id="6519aa55-8a43-4493-ab55-01db4f426094" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Suppliers.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/Suppliers.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/TopProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/TopProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataService/sampleData/productList.js" beforeDir="false" afterPath="$PROJECT_DIR$/dataService/sampleData/productList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/love.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/love.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/productDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/productDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +78,7 @@
       <workItem from="1646074109781" duration="1000" />
       <workItem from="1646075442534" duration="565000" />
       <workItem from="1646076440202" duration="52225000" />
-      <workItem from="1646167885178" duration="9771000" />
+      <workItem from="1646167885178" duration="11169000" />
     </task>
     <servers />
   </component>
