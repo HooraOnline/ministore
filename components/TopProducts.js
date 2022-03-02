@@ -29,8 +29,8 @@ function TopProduct(props) {
      const product=props.product;
      const inLoveProduct = loveStore.products.find(p=>p.id===product.id);
      const inBasket = basketStore.items.find(p=>p.id===product.id);
-     const [love, setLove] = useState(!!inLoveProduct);
      const [inbasket, setInbasket] = useState(!!inBasket);
+     const [love, setLove] = useState(!!inLoveProduct);
      const [count, setCount] = useState(1);
      //const [basket, setBasket] = useState(basketStore.items);
 
@@ -56,7 +56,7 @@ function TopProduct(props) {
     return (
         <View   style={{flex:1,width:'100%',flexDirection:'row',  alignItems:'center',justifyContent:'space-between',height:40,marginTop:10,paddingRight:10,paddingLeft:10}}>
             <Image onClick={addToBasket}  src={inbasket?ic_basketRed:ic_basket} width={24} height={24} />
-            <LinkButtom style={{padding:8,flex:1,marginLeft:10,marginRight:10}} href="/productDetails">
+            <LinkButtom onClick={()=>global.productId=product.id} style={{padding:8,flex:1,marginLeft:10,marginRight:10}} href="/productDetails">
                 <Text style={{fontSize:14}}>جزئیات محصول</Text>
             </LinkButtom>
             {/*<View style={{flex:1,flexDirection: 'row',borderWidth:1, borderRadius:5,backgroundColor:'#efefef',  alignItems: 'center',justifyContent: 'center',padding:8,marginLeft:10,marginRight:10}}>
@@ -81,4 +81,5 @@ function TopProduct(props) {
       </div>
   )
 }
+
 export default observer(TopProducts)

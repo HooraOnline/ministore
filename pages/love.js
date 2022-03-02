@@ -37,7 +37,7 @@ const LoveProductActions=observer(props=> {
     }
     return (
         <View   style={{flex:1,width:'100%',flexDirection:'row',  alignItems:'center',justifyContent:'space-between',height:40,marginTop:10,paddingRight:10,paddingLeft:10}}>
-            <Image  src={ic_basket} width={24} height={24} />
+            {/*<Image  src={ic_basket} width={24} height={24} />*/}
             <LinkButtom style={{padding:8,flex:1,marginLeft:10,marginRight:10}} href="/productDetails">
                 <Text style={{fontSize:14}}>جزئیات محصول</Text>
             </LinkButtom>
