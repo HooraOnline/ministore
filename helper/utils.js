@@ -1,3 +1,5 @@
+import Router from "next/router";
+
 export function priceFormatter(price) {
     price=Math.round(price);
     let formattedPrice = '';

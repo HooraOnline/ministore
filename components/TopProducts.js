@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './Suppliers.module.css'
 import {compony1, logo, mastar, mobl1, mobl2, morghDane, sahelChob} from "../public/images";
 import {productList} from "../dataService/sampleData/productList";
-import {priceFormatter} from "../helper/utils";
+import {navigation, priceFormatter} from "../helper/utils";
 import Line from "./public/Line";
 import {Text, TouchableOpacity, View} from "../react-native";
 import {ic_basket, ic_add, ic_minus, like, likeRed, ic_basketRed} from "../public/icons";
@@ -15,8 +15,12 @@ import basketStore from "../dataService/stores/BasketStore";
 
 function TopProduct(props) {
     const product=props.product;
+    const showDetail=()=>{
+        global.productId=product.id;
+        navigation.navigate('/productDetails')
+    }
     return (
-        <div  className={styles.card}>
+        <div onClick={showDetail}  className={styles.productcardList}>
             <Image src={product.image} width={350} height={200} />
             <h3 style={{fontSize:14}}>{product.title}</h3>
             <strike style={{color:'red'}}><span style={{fontSize:15,color:'red',}}> {priceFormatter(product.price)} تومان</span></strike>
