@@ -73,7 +73,7 @@ function TopProduct(props) {
  function TopProducts(props) {
   return (
       <div className={styles.grid}>
-          {productList.map(product=> <div  className={styles.card}>
+          {productList.map((product,index)=> <div key={index.toString()}  className={styles.card}>
               <TopProduct product={product}/>
               <Line/>
               <TopProductActions product={product} onChangeBasket={props.onChangeBasket}/>

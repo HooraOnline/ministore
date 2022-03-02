@@ -16,12 +16,14 @@ const NavBar=props=>{
 
     const navButtons=props.navButtons || [
         {
+            id:1,
             label: 'فروشگاه',
             path: "/",
             icon: home,
             activeIcon: homeRed,
         },
         {
+            id:2,
             label: 'سبد',
             path: "/basket",
             icon: ic_basket,
@@ -29,6 +31,7 @@ const NavBar=props=>{
             notif:basketStore.items.length,
         },
         {
+            id:3,
             label: 'مورد علاقه',
             path: "/love",
             icon: like,
@@ -40,7 +43,7 @@ const NavBar=props=>{
         <div style={props.style}>
             <View   style={NavBarCss}>
                 {navButtons.map((button,index) => (
-                    <Link  href={ button.path}>
+                    <Link key={index.toString()}  href={ button.path}>
                         <View style={{alignItems: 'center'}}>
                             <Image
                                 style={{width:24,height:24,}}

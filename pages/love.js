@@ -57,7 +57,7 @@ export default function Love() {
       <BublicPage title={'مورد علاقه های من'}>
         <main className={styles.main}>
             <div className={styles.grid}>
-                {lovelist.map(product=> <div  className={styles.card}>
+                {lovelist.map((product,index)=> <div key={index.toString()} className={styles.card}>
                     <LoveProduct product={product}/>
                     <Line/>
                     <LoveProductActions onRemovedFromeLove={onRemovedFromeLove} product={product}/>

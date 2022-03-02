@@ -50,6 +50,7 @@ function Home() {
         <div className={styles.container}>
             <BublicPage
                 title={'فروشگاه اینترنتی یونیکو'}>
+
                 <main className={styles.main}>
                     <div className={styles.box}>
                         <SearchBox/>

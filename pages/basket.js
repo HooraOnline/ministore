@@ -129,7 +129,7 @@ const BasketItemActions=props=> {
                             </LinkButtom>
                         </View>
                         <div style={{paddingTop: isWide? 100:55,}}>
-                            {basket.map(item=> <div >
+                            {basket.map((item,index)=> <div  key={index.toString()}>
                                 <BasketItem
                                     product={item.product}
                                     count={item.count}
