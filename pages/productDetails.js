@@ -38,7 +38,7 @@ const Actions=observer(props=> {
 
     }
     return (
-        <View   style={{flex:1,width:'100%',flexDirection:'row',  alignItems:'center',justifyContent:'space-between',height:40,marginTop:10,paddingRight:10,paddingLeft:10}}>
+        <View   style={{flex:1,width:'100%',flexDirection:'row',  alignItems:'center',justifyContent:'space-between',height:40,marginTop:10,paddingRight:10,paddingLeft:10,}}>
             <Image onClick={addToBasket}  src={inbasket?ic_basketRed:ic_basket} width={24} height={24} />
             <LinkButtom style={{padding:8,flex:1,marginLeft:10,marginRight:10}} href="/">
                 <Text style={{fontSize:14}}>بازگشت</Text>
@@ -51,6 +51,7 @@ const Actions=observer(props=> {
 //##########################Main class######################################
 export default function ProductDetails() {
     const [basketCount, setBasketCount] = useState(basketStore.items.length);
+    global.productId=global.productId ||1;
     const product=productList.find(p=>p.id===global.productId);
     const onChangeBasket =(newCount)=>{
         setBasketCount(newCount)
@@ -58,20 +59,17 @@ export default function ProductDetails() {
     return (
         <div className={styles.container}>
             <BublicPage title={product.title}>
-                <main className={styles.main} style={{width:'100%',}}>
-                    <div className={styles.grid} style={{width:'100%',}}>
-                        <div  className={styles.card} style={{width:'100%',}}>
-                            <img src={product.image} width={'100%'} />
-                            <h3 style={{fontSize:14}}>{product.title}</h3>
-                            <strike style={{color:'red'}}><span style={{fontSize:15,color:'red',}}> {priceFormatter(product.price)} تومان</span></strike>
-                            <span style={{fontSize:15,marginTop:10}}> {priceFormatter(product.price-product.off*product.price)} تومان</span>
-                            <Text>
-                                {product.description}
-                            </Text>
-                            <Line/>
-                            <Actions product={product} onChangeBasket={onChangeBasket}/>
-                        </div>
-
+                <main className={styles.main} style={{width:'100%',marginBottom:60}}>
+                    <div  className={styles.productcard} style={{width:'100%',}}>
+                        <img src={product.image} width={'100%'} />
+                        <h3 style={{fontSize:14}}>{product.title}</h3>
+                        <strike style={{color:'red'}}><span style={{fontSize:15,color:'red',}}> {priceFormatter(product.price)} تومان</span></strike>
+                        <span style={{fontSize:15,marginTop:10}}> {priceFormatter(product.price-product.off*product.price)} تومان</span>
+                        <Text style={{color:'#333',textAlign:'justify',paddingBottom:10}}>
+                            {product.description}
+                        </Text>
+                        <Line/>
+                        <Actions product={product} onChangeBasket={onChangeBasket}/>
                     </div>
                 </main>
             </BublicPage>
